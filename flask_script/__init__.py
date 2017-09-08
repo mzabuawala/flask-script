@@ -7,7 +7,10 @@ import sys
 import types
 import warnings
 from gettext import gettext as _
-from collections import OrderedDict
+try:
+    from collections import OrderedDict
+except ImportError:
+    from ordereddict import OrderedDict
 
 import argparse
 
